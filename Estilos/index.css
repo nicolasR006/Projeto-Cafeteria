@@ -1,0 +1,135 @@
+
+/* Configurações gerais que serão aplicadas e todos os elementos da pagina*/
+* {
+    margin: 0; /* Remove as margens padrão dos elementos */
+    padding: 0; /* Remove o espaçamento interno padrão dos elementos */
+    box-sizing: border-box; /* Faz a largura e a altura incluírem o conteúdo, o padding e a borda */
+}
+
+body {
+    min-height: 100vh; /* Garante que o body tenha pelo menos a altura da tela */
+    display: flex; /* permite organizar os elementos filhos de um elemento */
+    flex-direction: column;  /* Organiza os elementos filhos (que ficam dentro de body) em uma coluna, de cima para baixo */
+    font-family: Arial, sans-serif;  /* Define a fonte do texto; sans-serif é uma alternativa caso Arial não esteja disponível */
+    background-color: #f8f1e7;
+    color: #3e2723;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #4b2e24;
+    color: #fff3e0;
+    text-align: center;
+    padding: 8px; /* Cria um espaçamento interno de 8px em todos os lados */
+}
+
+header img {
+    width: 100px;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px; /* Cria 10px de espaço abaixo do título */
+}
+
+/* Navegação */
+nav {
+    background-color: #e6c9a8;
+    text-align: center;
+    padding: 8px; /* Cria espaçamento interno de 8px */
+}
+
+nav ul {
+    display: flex; /* Ativa o sistema flexivel para organizar os cartões */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 25px; /* Define 25px de espaço entre os itens */
+    list-style: none; /* Remove os marcadores padrão da lista */
+}
+
+nav a {
+    color: #4b2e24;
+    text-decoration: none;
+    margin: 0 15px; /* Define 0 de margem vertical e 15px de margem horizontal */
+    font-weight: bold; /* Deixa o texto em negrito */
+    font-size: 25px;
+}
+
+nav a:hover {
+    color: #a65e2e; /* Muda a cor do link durante o hover */
+}
+
+/* Conteúdo principal */
+main {
+    flex: 1; /* Permite que o conteúdo principal ocupe o espaço livre na coluna do body, ajuda a manter o rodape na parte inferior da tela, para que ele nao fique colado no main */
+}
+
+.principal,
+.cardapio { /* Seleciona os elementos que possuem a classe principal ou cardapio */
+    max-width: 1100px;
+    width: 100%;
+    margin: 15px auto; /*Cria 15px de margem vertical e centraliza horizontalmente com auto para que nosso main fique centralizado*/
+    padding: 10px 20px; /* Cria 10px de espaço interno vertical e 20px horizontal */
+}
+
+h2 {
+    text-align: center;
+    color: #6f4e37;
+    margin-bottom: 20px; /* Cria 20px de espaço abaixo do título */
+}
+
+p {
+    line-height: 1.6; /* Define a altura das linhas para melhorar a leitura */
+}
+
+/* Imagens do conteúdo */
+main img {
+    display: block;  /* Faz a imagem se comportar como um bloco */
+    max-width: 100%;
+    height: auto; /* Mantém a proporção original da imagem */
+    margin: 20px auto;  /* Cria 20px de margem vertical e centraliza horizontalmente */
+    border-radius: 10px;
+}
+
+/* Página inicial: apresentação e localização */
+#secao {
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos, deixando espaço entre eles */
+    align-items: flex-start; /* Alinha os elementos pelo início do eixo vertical */
+    gap: 50px; /* Define 50px de espaço entre os elementos filhos */
+}
+
+.local {
+    width: 45%;
+    order: 1; /* Define a posição deste elemento na ordem do Flexbox */
+} 
+
+.sobre {
+    width: 55%;
+    order: 2; /* Define a posição deste elemento depois do elemento com order: 1 */
+}
+
+#secao p {
+    line-height: 1.7; /* Aumenta o espaçamento entre as linhas desses parágrafos */
+    text-align: justify; /* Alinha o texto às margens esquerda e direita */
+}
+
+.img_cafeteria {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 0 15px; /* Define 0 em cima, 0 nas laterais e 15px embaixo */
+}
+
+/* Rodapé */
+footer {
+    background-color: #4b2e24;
+    color: #fff3e0;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px; /* Cria 50px de espaço acima do rodapé */
+
+}
+
+footer a {
+    color: #e6c9a8;
+}

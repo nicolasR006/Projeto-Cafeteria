@@ -1,0 +1,43 @@
+
+/* Título do cardápio */
+.titulo { 
+    text-align: center; /* Centraliza o texto horizontalmente */
+    color: #6f4e37;
+    font-size: 28px;
+    margin: 15px 0 25px; /* Define as margens: 15px em cima, 0 nas laterais e 25px embaixo */
+}
+
+/* Produtos organizados em uma grade */
+#article {
+    display: flex; /* Ativa o sistema flexivel para organizar os cartões */
+    flex-wrap: wrap;  /* Permite que os cartões passem para a próxima linha quando não couberem */
+    justify-content: center; /* Centraliza os cartões horizontalmente */
+    gap: 25px;
+}
+
+/* Cada produto */
+#article figure { /* Seleciona todos os elementos figure que estão dentro de #article para criamos um cartão*/
+    width: 220px;
+    background-color: #fffaf3;
+    padding: 12px; /* Cria 12px de espaço interno entre o conteúdo e as bordas */
+    border-radius: 10px; /* Arredonda os quatro cantos do cartão */
+    text-align: center;
+    margin: 0; /* Remove as margens externas padrão do figure */
+}
+
+/* Imagens dos produtos */
+.pratos {
+    width: 100%;
+    height: 160px;
+    object-fit: cover; /* por termos definidos altura e largura, as imagens vao ficar com o mesmo tamanho visual entao essa propriedade
+    preenche esse espaço sem esticar ou achatar a imagem, mas pode cortar um pouco das laterais ou da parte superior e inferior. */
+    border-radius: 8px;
+}
+
+/* Nome dos produtos */
+.legenda {
+    margin-top: 12px;
+    color: #4b2e24;
+    font-weight: bold; /* Exibe o texto em negrito */
+    font-size: 16px;
+}
